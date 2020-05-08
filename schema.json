@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/rubenverg/ora_spinners/master/schema.json",
+  "title": "List of Ora spinners",
+  "description": "A list of spinners that can be used in ora and are compliant to cli_spinners.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "interval": {"type": "number"},
+      "frames": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
