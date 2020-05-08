@@ -6,7 +6,7 @@ let exp = require('./index.json'), c = require('chalk'), ls = require('log-symbo
  * @param {object} o The object to search in.
  */
 
-exp.succeed = (what) => {
+exports.succeed = (what) => {
 	let chalkF = pathed.get(what + '.succeed.color') || 'green';
 	chalkF = c[chalkF];
 	let r = pathed.get(what + '.succeed.text') || ls.success;
@@ -14,7 +14,7 @@ exp.succeed = (what) => {
 	return r;
 }
 
-exp.fail = (what) => {
+exports.fail = (what) => {
 	let chalkF = pathed.get(what + '.fail.color') || 'red';
 	chalkF = c[chalkF];
 	let r = pathed.get(what + '.fail.text') || ls.error;
@@ -22,7 +22,7 @@ exp.fail = (what) => {
 	return r;
 }
 
-exp.warn = (what) => {
+exports.warn = (what) => {
 	let chalkF = pathed.get(what + '.warn.color') || 'yellow';
 	chalkF = c[chalkF];
 	let r = pathed.get(what + '.warn.text') || ls.warning;
@@ -30,7 +30,7 @@ exp.warn = (what) => {
 	return r;
 }
 
-exp.info = (what) => {
+exports.info = (what) => {
 	let chalkF = pathed.get(what + '.info.color') || 'blue';
 	chalkF = c[chalkF];
 	let r = pathed.get(what + '.info.text') || ls.info;
@@ -38,4 +38,4 @@ exp.info = (what) => {
 	return r;
 }
 
-module.exports = exp;
+module.exports = Object.assign({}, exports, exp);
