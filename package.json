@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/RubenVerg/ora_spinners#readme",
   "peerDependencies": {
-    "ora": "any"
+    "ora": "*"
+  },
+  "devDependencies": {
+    "ora": "^4.0.4"
   },
   "dependencies": {
-    "ora": "^4.0.4"
+    "object-path": "^0.11.4"
   }
 }

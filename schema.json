@@ -1,19 +1,295 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/rubenverg/ora_spinners/master/schema.json",
+  "$id": "https://raw.githubusercontent.com/RubenVerg/ora_spinners/master/schema.json",
   "title": "List of Ora spinners",
-  "description": "A list of spinners that can be used in ora and are compliant to cli_spinners.",
+  "description": "A collection of lists of spinners that can be used in ora and are compliant to cli_spinners with some extras.",
   "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    }
+  },
   "additionalProperties": {
     "type": "object",
-    "properties": {
-      "interval": {"type": "number"},
-      "frames": {
-        "type": "array",
-        "items": {
-          "type": "string"
+    "additionalProperties": {
+      "type": "object",
+      "properties": {
+        "interval": {
+          "type": "number"
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "succeed": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "color": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "green",
+                "enum": [
+                  "black",
+                  "red",
+                  "green",
+                  "yellow",
+                  "blue",
+                  "magenta",
+                  "cyan",
+                  "white",
+                  "blackBright",
+                  "gray",
+                  "grey",
+                  "redBright",
+                  "greenBright",
+                  "yellowBright",
+                  "blueBright",
+                  "magentaBright",
+                  "cyanBright",
+                  "whiteBright",
+                  "Background colors",
+                  "bgBlack",
+                  "bgRed",
+                  "bgGreen",
+                  "bgYellow",
+                  "bgBlue",
+                  "bgMagenta",
+                  "bgCyan",
+                  "bgWhite",
+                  "bgBlackBright",
+                  "bgGray",
+                  "bgGrey",
+                  "bgRedBright",
+                  "bgGreenBright",
+                  "bgYellowBright",
+                  "bgBlueBright",
+                  "bgMagentaBright",
+                  "bgCyanBright",
+                  "bgWhiteBright",
+                  "reset",
+                  "bold",
+                  "dim",
+                  "italic",
+                  "underline",
+                  "inverse",
+                  "hidden",
+                  "strikethrough",
+                  "visible"
+                ]
+              }
+            }
+          },
+          "required": [
+            "text"
+          ]
+        },
+        "fail": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "color": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "red",
+                "enum": [
+                  "black",
+                  "red",
+                  "green",
+                  "yellow",
+                  "blue",
+                  "magenta",
+                  "cyan",
+                  "white",
+                  "blackBright",
+                  "gray",
+                  "grey",
+                  "redBright",
+                  "greenBright",
+                  "yellowBright",
+                  "blueBright",
+                  "magentaBright",
+                  "cyanBright",
+                  "whiteBright",
+                  "Background colors",
+                  "bgBlack",
+                  "bgRed",
+                  "bgGreen",
+                  "bgYellow",
+                  "bgBlue",
+                  "bgMagenta",
+                  "bgCyan",
+                  "bgWhite",
+                  "bgBlackBright",
+                  "bgGray",
+                  "bgGrey",
+                  "bgRedBright",
+                  "bgGreenBright",
+                  "bgYellowBright",
+                  "bgBlueBright",
+                  "bgMagentaBright",
+                  "bgCyanBright",
+                  "bgWhiteBright",
+                  "reset",
+                  "bold",
+                  "dim",
+                  "italic",
+                  "underline",
+                  "inverse",
+                  "hidden",
+                  "strikethrough",
+                  "visible"
+                ]
+              }
+            }
+          },
+          "required": [
+            "text"
+          ]
+        },
+        "warn": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "color": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "yellow",
+                "enum": [
+                  "black",
+                  "red",
+                  "green",
+                  "yellow",
+                  "blue",
+                  "magenta",
+                  "cyan",
+                  "white",
+                  "blackBright",
+                  "gray",
+                  "grey",
+                  "redBright",
+                  "greenBright",
+                  "yellowBright",
+                  "blueBright",
+                  "magentaBright",
+                  "cyanBright",
+                  "whiteBright",
+                  "Background colors",
+                  "bgBlack",
+                  "bgRed",
+                  "bgGreen",
+                  "bgYellow",
+                  "bgBlue",
+                  "bgMagenta",
+                  "bgCyan",
+                  "bgWhite",
+                  "bgBlackBright",
+                  "bgGray",
+                  "bgGrey",
+                  "bgRedBright",
+                  "bgGreenBright",
+                  "bgYellowBright",
+                  "bgBlueBright",
+                  "bgMagentaBright",
+                  "bgCyanBright",
+                  "bgWhiteBright",
+                  "reset",
+                  "bold",
+                  "dim",
+                  "italic",
+                  "underline",
+                  "inverse",
+                  "hidden",
+                  "strikethrough",
+                  "visible"
+                ]
+              }
+            }
+          },
+          "required": [
+            "text"
+          ]
+        },
+        "info": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "color": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "default": "blue",
+                "enum": [
+                  "black",
+                  "red",
+                  "green",
+                  "yellow",
+                  "blue",
+                  "magenta",
+                  "cyan",
+                  "white",
+                  "blackBright",
+                  "gray",
+                  "grey",
+                  "redBright",
+                  "greenBright",
+                  "yellowBright",
+                  "blueBright",
+                  "magentaBright",
+                  "cyanBright",
+                  "whiteBright",
+                  "Background colors",
+                  "bgBlack",
+                  "bgRed",
+                  "bgGreen",
+                  "bgYellow",
+                  "bgBlue",
+                  "bgMagenta",
+                  "bgCyan",
+                  "bgWhite",
+                  "bgBlackBright",
+                  "bgGray",
+                  "bgGrey",
+                  "bgRedBright",
+                  "bgGreenBright",
+                  "bgYellowBright",
+                  "bgBlueBright",
+                  "bgMagentaBright",
+                  "bgCyanBright",
+                  "bgWhiteBright",
+                  "reset",
+                  "bold",
+                  "dim",
+                  "italic",
+                  "underline",
+                  "inverse",
+                  "hidden",
+                  "strikethrough",
+                  "visible"
+                ]
+              }
+            }
+          },
+          "required": ["text"]
         }
-      }
+      },
+      "additionalProperties": false,
+      "required": [
+        "frames"
+      ]
     }
   }
 }
